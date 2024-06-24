@@ -17,6 +17,15 @@ const productRoutes = require("./Routes/productRoutes");
 app.use("/user",userRoutes);
 app.use('/product',productRoutes);
 
+app.get("/test",(req,res)=>{
+    res.status(200).json({
+        status: true,
+        content:{
+            message:"Hi This API is live Now,Enjoy :)"
+        }
+    });
+})
+
 
 let PORT = process.env.PORT;
 app.listen(PORT,()=>{
